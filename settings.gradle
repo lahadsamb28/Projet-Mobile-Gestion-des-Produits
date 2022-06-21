@@ -1,0 +1,2 @@
+rootProject.name = "Gestion de Produits"
+include ':app'
