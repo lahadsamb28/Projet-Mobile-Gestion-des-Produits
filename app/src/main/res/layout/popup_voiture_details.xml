@@ -1,6 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="360dp"
+    android:layout_height="500dp"
+    android:padding="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/voiture_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/trend1" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/popup_name_voiture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="MERCEDES"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView3"
+        app:layout_constraintStart_toEndOf="@+id/cardView3"
+        app:layout_constraintTop_toTopOf="@+id/cardView3"
+        app:layout_constraintVertical_bias="0.486" />
+
+    <ImageView
+        android:id="@+id/close_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="@id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:id="@+id/desc_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DESCRIPTION"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/cardView3"
+        app:layout_constraintStart_toStartOf="@id/cardView3"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/desc_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/courgette"
+        android:text="this a description"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/desc_popup"
+        app:layout_constraintTop_toBottomOf="@+id/desc_popup" />
+
+    <TextView
+        android:id="@+id/categorie_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="CATEGORIE"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintStart_toStartOf="@+id/desc_sub"
+        app:layout_constraintTop_toBottomOf="@+id/desc_sub" />
+
+    <TextView
+        android:id="@+id/sub_categoriedesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/courgette"
+        android:text="Citadine"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/categorie_desc"
+        app:layout_constraintTop_toBottomOf="@+id/categorie_desc" />
+
+    <TextView
+        android:id="@+id/energie_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="ENERGIE"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/sub_categoriedesc"
+        app:layout_constraintTop_toBottomOf="@+id/sub_categoriedesc" />
+
+    <TextView
+        android:id="@+id/sub_energiedesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/courgette"
+        android:text="Essence"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/energie_desc"
+        app:layout_constraintTop_toBottomOf="@+id/energie_desc" />
+
+    <TextView
+        android:id="@+id/transmission_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="TRANSMISSION"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/sub_energiedesc"
+        app:layout_constraintTop_toBottomOf="@+id/sub_energiedesc" />
+
+    <TextView
+        android:id="@+id/sub_transmissiondesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/courgette"
+        android:text="Automatique"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/transmission_desc"
+        app:layout_constraintTop_toBottomOf="@+id/transmission_desc" />
+
+    <View
+        android:id="@+id/description_separation"
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sub_transmissiondesc" />
+
+    <ImageView
+        android:id="@+id/delete_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="50dp"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@+id/description_separation"
+        app:layout_constraintEnd_toStartOf="@+id/description_separation"
+        app:layout_constraintTop_toTopOf="@+id/description_separation" />
+
+    <ImageView
+        android:id="@+id/fav_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/ic_unstar"
+        app:layout_constraintBottom_toBottomOf="@+id/description_separation"
+        app:layout_constraintStart_toEndOf="@+id/description_separation"
+        app:layout_constraintTop_toTopOf="@+id/description_separation" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
