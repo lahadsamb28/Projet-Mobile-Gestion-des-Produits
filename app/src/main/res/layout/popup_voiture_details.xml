@@ -69,26 +69,6 @@
         app:layout_constraintStart_toStartOf="@+id/desc_popup"
         app:layout_constraintTop_toBottomOf="@+id/desc_popup" />
 
-    <TextView
-        android:id="@+id/categorie_desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="CATEGORIE"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="15dp"
-        app:layout_constraintStart_toStartOf="@+id/desc_sub"
-        app:layout_constraintTop_toBottomOf="@+id/desc_sub" />
-
-    <TextView
-        android:id="@+id/sub_categoriedesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/courgette"
-        android:text="Citadine"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/categorie_desc"
-        app:layout_constraintTop_toBottomOf="@+id/categorie_desc" />
 
     <TextView
         android:id="@+id/energie_desc"
@@ -97,8 +77,8 @@
         android:fontFamily="@font/alfa_slab_one"
         android:text="ENERGIE"
         android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/sub_categoriedesc"
-        app:layout_constraintTop_toBottomOf="@+id/sub_categoriedesc" />
+        app:layout_constraintStart_toStartOf="@+id/desc_sub"
+        app:layout_constraintTop_toBottomOf="@+id/desc_sub" />
 
     <TextView
         android:id="@+id/sub_energiedesc"

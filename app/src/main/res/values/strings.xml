@@ -1,22 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <resources>
     <string name="app_name">Gestion de Produits</string>
+    <string name="error_empty_fields">Tous les champs sont obligatoire</string>
 
-    
-    <string-array name="categorie_voiture">
-        <item>Categorie: Citadine</item>
-        <item>Categorie: Berline</item>
-        <item>Categorie: SUV</item>
-        <item>Categorie: 4X4</item>
-        <item>Categorie: Cabriolet</item>
-    </string-array>
-    <string-array name="energie_voiture">
-        <item>Energie: Essence</item>
-        <item>Energie: Gasoil</item>
-        <item>Energie: Electrique</item>
-        <item>Energie: Hybride</item>
-    </string-array>
-    <string-array name="transmission_voiture">
-        <item>Transmission: Automatique</item>
-        <item>Transmission: Essence</item>
-    </string-array>
+
 </resources>

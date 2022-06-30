@@ -23,7 +23,6 @@
         <item name="android:textColor">@color/material_dynamic_neutral60</item>
     </style>
     <style name="add_btn">
-        <item name="background">@color/darkturquoise</item>
         <item name="android:textColor">@color/white</item>
         <item name="fontFamily">@font/archivo_black</item>
         <item name="android:textSize">20sp</item>

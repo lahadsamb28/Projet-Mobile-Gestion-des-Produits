@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/activity_main.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/activity_upload_voiture.xml" value="0.22010869565217392" />
         <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/add_voiture_activity.xml" value="0.22010869565217392" />
-        <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/fragment_add_voiture.xml" value="0.22010869565217392" />
+        <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/fragment_add_voiture.xml" value="0.1" />
         <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/item_modelvoiture.xml" value="0.4" />
         <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/item_voiture.xml" value="0.17300724637681159" />

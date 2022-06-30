@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
-        android:text="Model de Voitures"
+        android:text="Top Trending CARS"
         android:textSize="20sp"
         android:fontFamily="@font/bree_serif"/>
 

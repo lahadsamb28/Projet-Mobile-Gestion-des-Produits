@@ -10,4 +10,5 @@
     <color name="darkturquoise">#30D5C8</color>
     <color name="darkgrey">#63666A</color>
     <color name="burgundyred">#6d071A</color>
+    <color name="error">#EA4F4F</color>
 </resources>
