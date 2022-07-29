@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/activity_main.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/drawable-anydpi/ic_Voiture.xml" value="0.1375" />
+        <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/drawable-anydpi/ic_delete.xml" value="0.15" />
+        <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/drawable-anydpi/ic_modify.xml" value="0.15" />
+        <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/drawable/bottom_nav_color.xml" value="0.1495" />
+        <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/activity_update.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/activity_upgrade_voiture.xml" value="0.2418478260869565" />
         <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/activity_upload_voiture.xml" value="0.22010869565217392" />
         <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/add_voiture_activity.xml" value="0.22010869565217392" />
         <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/fragment_add_voiture.xml" value="0.1" />
@@ -11,6 +17,7 @@
         <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/item_modelvoiture.xml" value="0.4" />
         <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/item_voiture.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/layout/popup_voiture_details.xml" value="0.264" />
+        <entry key="..\:/Users/22177/AndroidStudioProjects/GestiondeProduits/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
       </map>
     </option>
   </component>

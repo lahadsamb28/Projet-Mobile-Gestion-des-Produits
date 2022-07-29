@@ -5,9 +5,11 @@ import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import sn.lahadproject.gestiondeproduits.MainActivity
 import sn.lahadproject.gestiondeproduits.ModelData.ModelVoiture
 import sn.lahadproject.gestiondeproduits.R
@@ -22,7 +24,7 @@ class ImageAdapter(val context: MainActivity, private val ListItem: ArrayList<Mo
         //recuperation des infos
         val nameVoiture: TextView? = view.findViewById(R.id.name_voiture)
         val descVoiture: TextView? = view.findViewById(R.id.desc_voiture)
-        val star_icon = view.findViewById<ImageView>(R.id.fav_voiture)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -41,24 +43,15 @@ class ImageAdapter(val context: MainActivity, private val ListItem: ArrayList<Mo
 
         holder.descVoiture?.text= currentVoiture.description
 
-        //liked or not
-        if (currentVoiture.likes == 1){
-            holder.star_icon.setImageResource(R.drawable.ic_unstar)
-        }else{
-            holder.star_icon.setImageResource(R.drawable.ic_star)
-        }
 
-        holder.star_icon.setOnClickListener{
 
-            currentVoiture.likes != currentVoiture.likes
-            db.incrementLikes(currentVoiture)
-        }
 
         //Control popup onclick
 
         holder.itemView.setOnClickListener{
             voiturePopup(this, currentVoiture, ListItem, position).show()
         }
+
 
     }
 

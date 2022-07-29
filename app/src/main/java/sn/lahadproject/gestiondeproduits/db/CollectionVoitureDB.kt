@@ -22,8 +22,7 @@ class CollectionVoitureDB(
             $DESCRIPTION VARCHAR(50),
             $ENERGIE VARCHAR(50),
             $TRANSMISSION VARCHAR(50),
-            $IMAGE BLOB,
-            $LIKES INTEGER
+            $IMAGE BLOB
             )
             """.trimIndent()
 
@@ -44,7 +43,6 @@ class CollectionVoitureDB(
         values.put(ENERGIE, modelVoiture.energie)
         values.put(TRANSMISSION, modelVoiture.transmission)
         values.put(IMAGE, modelVoiture.Image)
-        values.put(LIKES, 0)
 
         val result = db.insert(COLVOITURE_TABLE, null, values).toInt()
         db.close()
@@ -67,8 +65,7 @@ class CollectionVoitureDB(
                     val energie = cursor.getString(cursor.getColumnIndexOrThrow(ENERGIE))
                     val transmission = cursor.getString(cursor.getColumnIndexOrThrow(TRANSMISSION))
                     val img = cursor.getBlob(cursor.getColumnIndexOrThrow(IMAGE))
-                    val likes = cursor.getInt(cursor.getColumnIndexOrThrow(LIKES))
-                    val post =ModelVoiture(id, marque, model, energie, transmission, img, likes)
+                    val post =ModelVoiture(id, marque, model, energie, transmission, img)
                     posts.add(post)
                 }while (cursor.moveToNext())
             }
@@ -86,17 +83,25 @@ class CollectionVoitureDB(
 
     }
 
-    fun incrementLikes(currentVoiture: ModelVoiture) {
-        val db = this.writableDatabase
+    fun editVoiture(modelVoiture: ModelVoiture): Int {
+        val db = writableDatabase
 
-        val newLikesCount = currentVoiture.likes+1
-        val values = ContentValues()
-        values.put(ID, currentVoiture.id)
-        values.put(LIKES, newLikesCount)
+        val valeur = ContentValues()
+        valeur.put(ID, modelVoiture.id)
+        valeur.put(NAME, modelVoiture.name)
+        valeur.put(DESCRIPTION, modelVoiture.description)
+        valeur.put(ENERGIE, modelVoiture.energie)
+        valeur.put(TRANSMISSION, modelVoiture.transmission)
+        valeur.put(IMAGE, modelVoiture.Image)
 
-        db.update(COLVOITURE_TABLE, values, "id=?", arrayOf("${currentVoiture.id}"))
+        val succes = db.update(COLVOITURE_TABLE, valeur, "id=" + modelVoiture.id, null)
         db.close()
+
+        return succes;
     }
+
+
+
 
     companion object{
         const val DB_VERSION = 2
@@ -108,6 +113,5 @@ class CollectionVoitureDB(
         private val ENERGIE = "energie"
         private val TRANSMISSION = "transmission"
         private val IMAGE = "image"
-        private val LIKES = "likes"
     }
 }

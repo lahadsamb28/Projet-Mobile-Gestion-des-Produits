@@ -1,11 +1,17 @@
 package sn.lahadproject.gestiondeproduits
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
+import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentTransaction
 import sn.lahadproject.gestiondeproduits.ModelData.ModelVoiture
 import sn.lahadproject.gestiondeproduits.adapter.ImageAdapter
 import sn.lahadproject.gestiondeproduits.adapter.getBitmap
@@ -25,13 +31,25 @@ class voiturePopup(
         setContentView(R.layout.popup_voiture_details)
         setupCompenents()
         setupcloseButton()
-        setupstarButton()
+
         setupDeletedButton()
+        setupEditButton()
     }
 
-    private fun setupstarButton() {
-            db.incrementLikes(currentVoiture)
+    private fun setupEditButton(){
+        findViewById<ImageView>(R.id.edit_btn).setOnClickListener {
+            val intentUpdateVoiture= Intent(context, updateVoiture::class.java)
+            intentUpdateVoiture.putExtra("id", currentVoiture.id)
+            intentUpdateVoiture.putExtra("marque", currentVoiture.name)
+            intentUpdateVoiture.putExtra("model", currentVoiture.description)
+            intentUpdateVoiture.putExtra("energie", currentVoiture.energie)
+            intentUpdateVoiture.putExtra("transmission", currentVoiture.transmission)
+            intentUpdateVoiture.putExtra("image", currentVoiture.Image)
+            context.startActivity(intentUpdateVoiture)
+
+        }
     }
+
 
     private fun setupcloseButton() {
         findViewById<ImageView>(R.id.close_btn).setOnClickListener {
@@ -45,6 +63,7 @@ class voiturePopup(
             val resultDeleted = db.deletedVoiture(currentVoiture.id)
             if (resultDeleted){
                 values.removeAt(position)
+
                 adapter.notifyDataSetChanged()
                 dismiss()
             }else{
@@ -65,5 +84,6 @@ class voiturePopup(
         //actualiser energie et transmission
         findViewById<TextView>(R.id.sub_energiedesc).text = currentVoiture.energie
         findViewById<TextView>(R.id.sub_transmissiondesc).text = currentVoiture.transmission
+
     }
 }

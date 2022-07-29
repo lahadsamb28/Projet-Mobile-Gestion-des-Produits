@@ -15,12 +15,5 @@
         android:layout_height="match_parent"
         android:src="@drawable/trend6"/>
 
-    <ImageView
-        android:id="@+id/fav_voiture"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_margin="10dp"
-        android:src="@drawable/ic_star"
-        app:tint="@color/darkturquoise" />
 
 </androidx.cardview.widget.CardView>

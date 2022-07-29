@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">Gestion de Produits</string>
     <string name="error_empty_fields">Tous les champs sont obligatoire</string>
+    <string name="home_page_title">Voitures</string>
+    <string name="add_page_title">Ajouter</string>
 
 
 </resources>

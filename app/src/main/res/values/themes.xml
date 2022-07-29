@@ -28,4 +28,9 @@
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="navbar" parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">18sp</item>
+       <item name="fontFamily">@font/archivo_black</item>
+    </style>
 </resources>

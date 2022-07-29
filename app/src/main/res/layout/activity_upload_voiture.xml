@@ -14,7 +14,7 @@
             android:id="@+id/upload_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:padding="20dp"
+            android:padding="30dp"
             android:text="Upload Image"
             android:textColor="@color/white"
             android:fontFamily="@font/archivo_black"
@@ -23,10 +23,10 @@
 
         <ImageView
             android:id="@+id/preview_Img"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/trend3"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_image" />
     </LinearLayout>
 
     <EditText
@@ -69,7 +69,7 @@
         android:id="@+id/conf_btn"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/archivo_black"
         android:text="Confirmer"
         android:textColor="@color/white"

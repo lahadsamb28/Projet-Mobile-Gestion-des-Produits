@@ -9,13 +9,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/logo"
+        android:label="ESP LUXURY CARS"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GestionDeProduits">
         <activity
-            android:name=".UploadVoiture"
+            android:name=".updateVoiture"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

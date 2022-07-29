@@ -63,18 +63,23 @@ class UploadVoiture_fragment(private val context: MainActivity): Fragment(){
                 val imagesblob : ByteArray= getBytes(bitmap)
 
                 val modelVoiture = ModelVoiture(marque, model, carburant, modeTrans, imagesblob)
+                val status = db.addVoiture(modelVoiture)
+                if (status){
+                    Toast.makeText(context, "Voiture ajoutée avec succes", Toast.LENGTH_LONG).show()
+                    //clear formulaire
+                    nom.setText("")
+                    description.setText("")
+                    energie.setText("")
+                    transmission.setText("")
+                    bitmap = null
+                }else{
+                    Toast.makeText(context, "une erreur est survenue", Toast.LENGTH_LONG).show()
+                }
 
-                db.addVoiture(modelVoiture)
-
-//                clear formulaire
-                nom.setText("")
-                description.setText("")
-                energie.setText("")
-                transmission.setText("")
-                bitmap = null
 
 
-                context.finish()
+
+//
             }
 
         }

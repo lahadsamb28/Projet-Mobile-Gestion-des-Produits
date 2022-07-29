@@ -130,11 +130,11 @@
         app:layout_constraintTop_toTopOf="@+id/description_separation" />
 
     <ImageView
-        android:id="@+id/fav_btn"
+        android:id="@+id/edit_btn"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginLeft="50dp"
-        android:src="@drawable/ic_unstar"
+        android:src="@drawable/ic_modify"
         app:layout_constraintBottom_toBottomOf="@+id/description_separation"
         app:layout_constraintStart_toEndOf="@+id/description_separation"
         app:layout_constraintTop_toTopOf="@+id/description_separation" />
